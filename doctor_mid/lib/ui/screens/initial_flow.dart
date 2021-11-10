@@ -1,6 +1,13 @@
 import 'package:doctor_mid/components/component_text_widgets.dart';
 import 'package:doctor_mid/constants/constants_strings.dart';
+import 'package:doctor_mid/ui/screens/AgendaScreens/agenda_second.dart';
+import 'package:doctor_mid/ui/screens/ChatScreens/ChatThrid_screen.dart';
+import 'package:doctor_mid/ui/screens/ChatScreens/chatSecond_screen.dart';
+import 'package:doctor_mid/ui/screens/ChatScreens/patients_chat_screen.dart';
+import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/confirmation_delaCita_screen.dart';
 import 'package:doctor_mid/ui/screens/dashboard_screen.dart';
+import 'package:doctor_mid/ui/screens/informacion_DelaCita_Screens/informacion_delacita_first_Screen.dart';
+import 'package:doctor_mid/ui/screens/informacion_DelaCita_Screens/informacion_delacita_third_screen.dart';
 import 'package:doctor_mid/ui/screens/notifications_screen.dart';
 import 'package:doctor_mid/ui/screens/seleccion_screen.dart';
 import 'package:doctor_mid/ui/screens/signIn_datos_correctos_screen.dart';
@@ -72,6 +79,41 @@ class _InitialFlowState extends State<InitialFlow> {
                 title: ConstantString.Seleccion,
                 onpressed: () {
                   Get.to(SeleccionDeMembresiaScreen());
+                }),
+            buildListItem(
+                title: ConstantString.CHAT_FIRST,
+                onpressed: () {
+                  Get.to(PatientsChatScreen());
+                }),
+            buildListItem(
+                title: ConstantString.CHAT_SECOND,
+                onpressed: () {
+                  Get.to(ChatSecondScreen());
+                }),
+            buildListItem(
+                title: ConstantString.CHAT_THIRD,
+                onpressed: () {
+                  Get.to(ChatThirdScreen());
+                }),
+            buildListItem(
+                title: ConstantString.AGENDA_SECOND,
+                onpressed: () {
+                  Get.to(AgendaSecondScreen());
+                }),
+            buildListItem(
+                title: ConstantString.INFO_FIRST,
+                onpressed: () {
+                  Get.to(InfomacionDeLaCitaFirstScreen());
+                }),
+            buildListItem(
+                title: ConstantString.INFO_THIRD,
+                onpressed: () {
+                  Get.to(InformacionDelaCitaThirdScreen());
+                }),
+            buildListItem(
+                title: ConstantString.CONFIRMATION_DE_LA_CITA,
+                onpressed: () {
+                  Get.to(ConfirmacionDeLaCitaScreen());
                 }),
           ],
         ),

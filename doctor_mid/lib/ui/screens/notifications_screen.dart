@@ -92,7 +92,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                                 maxLines: 2)
                           ],
                         ),
-                      )
+                      ),
                     ],
                   );
                 },

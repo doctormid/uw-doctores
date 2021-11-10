@@ -18,6 +18,7 @@ class ConstantString {
   static const String CHAT_FIRST = "Chat first";
   static const String CHAT_SECOND = "Chat second";
   static const String CHAT_THIRD = "Chat third";
+  static const String CONFIRMATION_DE_LA_CITA = 'Confirmacion De La Sita ';
 
   static const String AGENDA_FIRST = "Agenda first";
   static const String AGENDA_SECOND = "Agenda second";

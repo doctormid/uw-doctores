@@ -20,27 +20,27 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
   Widget build(BuildContext context) {
     return Container(
         // width: Dimensions.Size_300,
-        width: 120,
+        //width: 100,
         child: DropdownButton<String>(
-          hint: Text("1 Month"),
-          elevation: 5,
-          items: widget.dropDownItem.map((String dropDownStringItem) {
-            return DropdownMenuItem<String>(
-              value: dropDownStringItem,
-              child: Text(
-                dropDownStringItem,
-                style: TextStyle(fontSize: 20.0),
-              ),
-            );
-          }).toList(),
-          onChanged: (String val) {
-            widget.selectedValue(val);
+      hint: Text("Excelent"),
+      elevation: 2,
+      items: widget.dropDownItem.map((String dropDownStringItem) {
+        return DropdownMenuItem<String>(
+          value: dropDownStringItem,
+          child: Text(
+            dropDownStringItem,
+            style: TextStyle(fontSize: 16.0),
+          ),
+        );
+      }).toList(),
+      onChanged: (String val) {
+        widget.selectedValue(val);
 
-            setState(() {
-              this._currentItemSelected = val;
-            });
-          },
-          value: _currentItemSelected,
-        ));
+        setState(() {
+          this._currentItemSelected = val;
+        });
+      },
+      value: _currentItemSelected,
+    ));
   }
 }
