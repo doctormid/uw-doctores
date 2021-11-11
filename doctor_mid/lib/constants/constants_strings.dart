@@ -19,13 +19,20 @@ class ConstantString {
   static const String CHAT_SECOND = "Chat second";
   static const String CHAT_THIRD = "Chat third";
   static const String CONFIRMATION_DE_LA_CITA = 'Confirmacion De La Sita ';
+  static const String CITA_FINALIZED = 'Cita Finalized ';
+  static const String CITA_CANCLED = 'Cita Cancelada ';
+  static const String AGENDAR_NUEVA_CITA = 'Agendar Nueva Cita';
+  static const String AGENDAR_NUEVA_CITA_THIRD = 'Agendar Nueva Cita Third';
 
   static const String AGENDA_FIRST = "Agenda first";
   static const String AGENDA_SECOND = "Agenda second";
   static const String INFO_FIRST = "Información de la cita first";
   static const String INFO_THIRD = "Información de la cita third";
   static const String CITY = "Nueva cita";
-  static const String PATIENTS = "Pacientes";
+  static const String PATIENTSFIRST = "Pacientes First";
+  static const String PATIENTSECOND = "Pacientes Second";
+  static const String PATIENTSTHIRD = "Pacientes Third";
+
   static const String PAGOS = "Pagos y cobros";
   static const String CONFIGURATION = "Configuración";
   static const String PROFILE = "Perfil";

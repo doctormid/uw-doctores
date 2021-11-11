@@ -1,19 +1,15 @@
-import 'package:doctor_mid/components/component_button.dart';
 import 'package:doctor_mid/components/component_sized_box.dart';
 import 'package:doctor_mid/components/component_text_widgets.dart';
 import 'package:doctor_mid/constants/constants_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sweetalert/sweetalert.dart';
 
-class InformacionDelaCitaThirdScreen extends StatefulWidget {
+class CitaCanceladaScreen extends StatefulWidget {
   @override
-  _InformacionDelaCitaThirdScreenState createState() =>
-      _InformacionDelaCitaThirdScreenState();
+  _CitaCanceladaScreenState createState() => _CitaCanceladaScreenState();
 }
 
-class _InformacionDelaCitaThirdScreenState
-    extends State<InformacionDelaCitaThirdScreen> {
+class _CitaCanceladaScreenState extends State<CitaCanceladaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,11 +61,15 @@ class _InformacionDelaCitaThirdScreenState
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Image.network(
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD-l889V8_Nv64SYZECELEBUzvWgmgxdlAow&usqp=CAU',
-                      height: 100,
-                      width: 100,
-                      fit: BoxFit.contain,
+                    ComponentSizedBox.sideMargin(size: 10),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.network(
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD-l889V8_Nv64SYZECELEBUzvWgmgxdlAow&usqp=CAU',
+                        height: 100,
+                        width: 100,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                     ComponentSizedBox.sideMargin(size: 100),
                     Padding(
@@ -100,15 +100,15 @@ class _InformacionDelaCitaThirdScreenState
                   ],
                 ),
                 ComponentSizedBox.topMargin(size: 30),
+                Center(
+                  child: ComponentText.buildTextWidget(
+                      title: 'Cancelled',
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.redAccent),
+                ),
 
-                ComponentButton.buildTransparentButton(
-                    title: 'Cancel',
-                    height: 50,
-                    width: 140,
-                    texColor: Colors.white,
-                    borderColor: Colors.redAccent,
-                    btnColor: Colors.redAccent),
-                ComponentSizedBox.topMargin(size: 10),
+                //ComponentSizedBox.topMargin(size: 10),
                 Divider(
                   height: 20,
                   thickness: 1,
@@ -125,6 +125,7 @@ class _InformacionDelaCitaThirdScreenState
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ComponentText.buildTextWidget(
                             title: 'Quantity', fontWeight: FontWeight.bold),
@@ -135,23 +136,26 @@ class _InformacionDelaCitaThirdScreenState
                       ],
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ComponentText.buildTextWidget(
                             title: 'Service', fontWeight: FontWeight.bold),
                         ComponentSizedBox.topMargin(size: 5),
                         ComponentText.buildTextWidget(title: 'Consultation'),
                         ComponentSizedBox.topMargin(size: 5),
-                        ComponentText.buildTextWidget(title: 'Limpieza'),
+                        ComponentText.buildTextWidget(
+                            title: 'Revision general'),
                       ],
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ComponentText.buildTextWidget(
                             title: 'Cost', fontWeight: FontWeight.bold),
                         ComponentSizedBox.topMargin(size: 5),
                         ComponentText.buildTextWidget(title: '\$3000 MN'),
                         ComponentSizedBox.topMargin(size: 5),
-                        ComponentText.buildTextWidget(title: '\$500 MN'),
+                        ComponentText.buildTextWidget(title: '\$2.00 MN'),
                       ],
                     ),
                   ],
@@ -202,7 +206,7 @@ class _InformacionDelaCitaThirdScreenState
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
                     ComponentText.buildTextWidget(
-                        title: '-\&2600 M.N',
+                        title: '\&30000 M.N',
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
                   ],
@@ -215,32 +219,9 @@ class _InformacionDelaCitaThirdScreenState
                     title: 'Aditional informaction',
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
-
-                ComponentSizedBox.topMargin(size: 30),
-                Center(
-                  child: ComponentButton.buildTransparentButton(
-                      title: 'Start Appointment',
-                      height: 50,
-                      width: 220,
-                      texColor: Colors.white,
-                      borderColor: ConstantColor.APP_COLOR,
-                      btnColor: ConstantColor.APP_COLOR,
-                      onPressed: () {
-                        SweetAlert.show(context,
-                            title: "Are you Sure?",
-                            style: SweetAlertStyle.success,
-                            showCancelButton: true, onPress: (bool isConfirm) {
-                          if (isConfirm) {
-                            SweetAlert.show(context,
-                                style: SweetAlertStyle.success,
-                                title: "Success");
-                            // return false to keep dialog
-                            return false;
-                          }
-                        });
-                      }),
-                ),
-                ComponentSizedBox.topMargin(size: 30),
+                ComponentText.buildTextWidget(
+                    title: 'a tooth hurts a lot and it has a black dot'),
+                ComponentSizedBox.topMargin(size: 20),
               ],
             ),
           ),

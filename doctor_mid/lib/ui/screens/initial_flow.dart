@@ -1,10 +1,19 @@
 import 'package:doctor_mid/components/component_text_widgets.dart';
+import 'package:doctor_mid/constants/constants_colors.dart';
 import 'package:doctor_mid/constants/constants_strings.dart';
 import 'package:doctor_mid/ui/screens/AgendaScreens/agenda_second.dart';
 import 'package:doctor_mid/ui/screens/ChatScreens/ChatThrid_screen.dart';
 import 'package:doctor_mid/ui/screens/ChatScreens/chatSecond_screen.dart';
 import 'package:doctor_mid/ui/screens/ChatScreens/patients_chat_screen.dart';
+import 'package:doctor_mid/ui/screens/ConfiguracionScreens/configuracion_screen.dart';
+import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agendar_nueva_cita_third_screen.dart';
+import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agender_nueva_cita_screen.dart';
+import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/cita_cancelada_screen.dart';
+import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/cita_finalized_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/confirmation_delaCita_screen.dart';
+import 'package:doctor_mid/ui/screens/PacientsScreens/pacients_first_screen.dart';
+import 'package:doctor_mid/ui/screens/PacientsScreens/pacients_second_screen.dart';
+import 'package:doctor_mid/ui/screens/PacientsScreens/pacients_third_screen.dart';
 import 'package:doctor_mid/ui/screens/dashboard_screen.dart';
 import 'package:doctor_mid/ui/screens/informacion_DelaCita_Screens/informacion_delacita_first_Screen.dart';
 import 'package:doctor_mid/ui/screens/informacion_DelaCita_Screens/informacion_delacita_third_screen.dart';
@@ -31,6 +40,7 @@ class _InitialFlowState extends State<InitialFlow> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: ConstantColor.primaryColor,
         title: ComponentText.buildTextWidget(
             title: 'Main Menu',
             fontSize: 20,
@@ -114,6 +124,46 @@ class _InitialFlowState extends State<InitialFlow> {
                 title: ConstantString.CONFIRMATION_DE_LA_CITA,
                 onpressed: () {
                   Get.to(ConfirmacionDeLaCitaScreen());
+                }),
+            buildListItem(
+                title: ConstantString.CITA_FINALIZED,
+                onpressed: () {
+                  Get.to(CitaFinaLizedScreen());
+                }),
+            buildListItem(
+                title: ConstantString.CITA_CANCLED,
+                onpressed: () {
+                  Get.to(CitaCanceladaScreen());
+                }),
+            buildListItem(
+                title: ConstantString.AGENDAR_NUEVA_CITA,
+                onpressed: () {
+                  Get.to(AgendarNuevaCita());
+                }),
+            buildListItem(
+                title: ConstantString.AGENDAR_NUEVA_CITA_THIRD,
+                onpressed: () {
+                  Get.to(AgendarNuevaCitaThirdScreen());
+                }),
+            buildListItem(
+                title: ConstantString.PATIENTSFIRST,
+                onpressed: () {
+                  Get.to(PacientsFirstScreen());
+                }),
+            buildListItem(
+                title: ConstantString.PATIENTSECOND,
+                onpressed: () {
+                  Get.to(PacientsSecondScreen());
+                }),
+            buildListItem(
+                title: ConstantString.PATIENTSTHIRD,
+                onpressed: () {
+                  Get.to(PacientsThirdScreen());
+                }),
+            buildListItem(
+                title: ConstantString.CONFIGURATION,
+                onpressed: () {
+                  Get.to(ConfiguracionScreen());
                 }),
           ],
         ),

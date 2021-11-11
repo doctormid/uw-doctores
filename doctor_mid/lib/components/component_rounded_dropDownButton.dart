@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
-class CustomDropDownButton extends StatefulWidget {
+class CustomRoundedDropDownButton extends StatefulWidget {
   List<String> dropDownItem;
   Function selectedValue;
-  String hint;
 
-  CustomDropDownButton({
+  CustomRoundedDropDownButton({
     this.dropDownItem,
     this.selectedValue,
   });
   @override
-  _CustomDropDownButtonState createState() => _CustomDropDownButtonState();
+  _CustomRoundedDropDownButtonState createState() =>
+      _CustomRoundedDropDownButtonState();
 }
 
-class _CustomDropDownButtonState extends State<CustomDropDownButton> {
+class _CustomRoundedDropDownButtonState
+    extends State<CustomRoundedDropDownButton> {
   String _currentItemSelected;
   final List<String> items = [];
-  String hint;
 
   @override
   Widget build(BuildContext context) {

@@ -5,21 +5,20 @@ import 'package:doctor_mid/components/component_text_widgets.dart';
 import 'package:doctor_mid/constants/constants_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sweetalert/sweetalert.dart';
 
-class ConfirmacionDeLaCitaScreen extends StatefulWidget {
+class AgendarNuevaCita extends StatefulWidget {
   @override
-  _ConfirmacionDeLaCitaScreenState createState() =>
-      _ConfirmacionDeLaCitaScreenState();
+  _AgendarNuevaCitaState createState() => _AgendarNuevaCitaState();
 }
 
-class _ConfirmacionDeLaCitaScreenState
-    extends State<ConfirmacionDeLaCitaScreen> {
+class _AgendarNuevaCitaState extends State<AgendarNuevaCita> {
   List<String> puntuality = ['Good', 'Excelent', 'Fair', 'Bad'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         elevation: 0.0,
+        elevation: 0.0,
         backgroundColor: ConstantColor.primaryColor,
         title: Text('Appointment Details'),
         centerTitle: false,
@@ -174,6 +173,14 @@ class _ConfirmacionDeLaCitaScreenState
                   decoration: BoxDecoration(
                       color: Color(0xffF3F3F4),
                       borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
                 ),
               ),
               ComponentSizedBox.topMargin(size: 20),
@@ -184,7 +191,21 @@ class _ConfirmacionDeLaCitaScreenState
                     width: 200,
                     texColor: Colors.white,
                     borderColor: ConstantColor.APP_COLOR,
-                    btnColor: ConstantColor.APP_COLOR),
+                    btnColor: ConstantColor.APP_COLOR,
+                    onPressed: () {
+                      SweetAlert.show(context,
+                          title: "Do you want to create a new",
+                          subtitle: "Appointment?",
+                          style: SweetAlertStyle.confirm,
+                          showCancelButton: true, onPress: (bool isConfirm) {
+                        if (isConfirm) {
+                          SweetAlert.show(context,
+                              style: SweetAlertStyle.confirm, title: "Success");
+                          // return false to keep dialog
+                          return false;
+                        }
+                      });
+                    }),
               ),
             ],
           ),

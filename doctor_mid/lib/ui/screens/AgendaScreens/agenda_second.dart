@@ -4,6 +4,7 @@ import 'package:doctor_mid/components/component_sized_box.dart';
 import 'package:doctor_mid/components/component_text_widgets.dart';
 import 'package:doctor_mid/constants/constants_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AgendaSecondScreen extends StatefulWidget {
   @override
@@ -15,9 +16,21 @@ class _AgendaSecondScreenState extends State<AgendaSecondScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: ConstantColor.primaryColor,
         title: Text('Appointment Details'),
         centerTitle: false,
         automaticallyImplyLeading: false,
+        leading: InkWell(
+          onTap: () {
+            Get.back();
+          },
+          child: Icon(
+            Icons.chevron_left,
+            color: Colors.white,
+            size: 30,
+          ),
+        ),
         actions: <Widget>[
           Padding(
               padding: const EdgeInsets.only(right: 20.0),
@@ -50,11 +63,14 @@ class _AgendaSecondScreenState extends State<AgendaSecondScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Image.network(
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD-l889V8_Nv64SYZECELEBUzvWgmgxdlAow&usqp=CAU',
-                      height: 100,
-                      width: 100,
-                      fit: BoxFit.contain,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.network(
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD-l889V8_Nv64SYZECELEBUzvWgmgxdlAow&usqp=CAU',
+                        height: 100,
+                        width: 100,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                     ComponentSizedBox.sideMargin(size: 100),
                     Padding(
