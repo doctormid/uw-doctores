@@ -6,14 +6,20 @@ import 'package:doctor_mid/ui/screens/ChatScreens/ChatThrid_screen.dart';
 import 'package:doctor_mid/ui/screens/ChatScreens/chatSecond_screen.dart';
 import 'package:doctor_mid/ui/screens/ChatScreens/patients_chat_screen.dart';
 import 'package:doctor_mid/ui/screens/ConfiguracionScreens/configuracion_screen.dart';
+import 'package:doctor_mid/ui/screens/EditarServicioScreens/editar_servicio_first_screen.dart';
+import 'package:doctor_mid/ui/screens/EditarServicioScreens/editar_servicio_second_screen.dart';
+import 'package:doctor_mid/ui/screens/EditarServicioScreens/editar_sevicio_third_screen.dart';
+import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agendar_nueva_cita_forth_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agendar_nueva_cita_third_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agender_nueva_cita_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/cita_cancelada_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/cita_finalized_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/confirmation_delaCita_screen.dart';
 import 'package:doctor_mid/ui/screens/PacientsScreens/pacients_first_screen.dart';
+import 'package:doctor_mid/ui/screens/PacientsScreens/pacients_forth_screen.dart';
 import 'package:doctor_mid/ui/screens/PacientsScreens/pacients_second_screen.dart';
 import 'package:doctor_mid/ui/screens/PacientsScreens/pacients_third_screen.dart';
+import 'package:doctor_mid/ui/screens/PerfilScreen/perfil_screen.dart';
 import 'package:doctor_mid/ui/screens/dashboard_screen.dart';
 import 'package:doctor_mid/ui/screens/informacion_DelaCita_Screens/informacion_delacita_first_Screen.dart';
 import 'package:doctor_mid/ui/screens/informacion_DelaCita_Screens/informacion_delacita_third_screen.dart';
@@ -164,6 +170,31 @@ class _InitialFlowState extends State<InitialFlow> {
                 title: ConstantString.CONFIGURATION,
                 onpressed: () {
                   Get.to(ConfiguracionScreen());
+                }),
+            buildListItem(
+                title: ConstantString.PROFILE,
+                onpressed: () {
+                  Get.to(PerfilScreen());
+                }),
+            buildListItem(
+                title: ConstantString.PATIENTSFORTH,
+                onpressed: () {
+                  Get.to(PacientsForthScreen());
+                }),
+            buildListItem(
+                title: ConstantString.EDITAR_FIRST,
+                onpressed: () {
+                  Get.to(EditarServicioFirstScreen());
+                }),
+            buildListItem(
+                title: ConstantString.EDITAR_SECOND,
+                onpressed: () {
+                  Get.to(EditarServicioSecondScreen());
+                }),
+            buildListItem(
+                title: ConstantString.EDITAR_Third,
+                onpressed: () {
+                  Get.to(EditarServicioThirdScreen());
                 }),
           ],
         ),

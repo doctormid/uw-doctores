@@ -261,4 +261,64 @@ class FormFieldComponent {
       ),
     );
   }
+
+  static Widget nonroundedFormField({
+    String hint,
+    IconData iconField,
+    IconData suffixIcon,
+    Function onChange,
+    Function validator,
+    Function onSaved,
+    Function onPasswordPressed,
+    isObscure = false,
+    isEmail = false,
+    bool enabled = true,
+    Function onSubmitted,
+    String lableText,
+    TextInputType keyboardType = TextInputType.text,
+    bool autoValidate = false,
+    double width,
+  }) {
+    return Container(
+      width: width,
+      height: 40,
+      child: Theme(
+        data: ThemeData(
+          primaryColor: ConstantColor.APP_COLOR,
+          hintColor: Colors.black,
+        ),
+        child: TextFormField(
+          enabled: enabled,
+          obscureText: isObscure,
+          autovalidate: autoValidate,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+                //borderRadius: BorderRadius.circular(20.0),
+                ),
+            suffixIcon: IconButton(
+              icon: Icon(
+                suffixIcon,
+                color: ConstantColor.APP_COLOR,
+                size: 20,
+              ),
+              onPressed: onPasswordPressed,
+            ),
+            hintText: hint,
+            labelText: lableText,
+            labelStyle: TextStyle(color: Colors.black),
+            hintStyle: TextStyle(),
+            contentPadding:
+                EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
+          ),
+          onChanged: onChange,
+          onFieldSubmitted: onSubmitted,
+          validator: (value) {
+            return Validation.validateValue(value, hint, isEmail);
+          },
+          onSaved: onSaved,
+          keyboardType: keyboardType,
+        ),
+      ),
+    );
+  }
 }

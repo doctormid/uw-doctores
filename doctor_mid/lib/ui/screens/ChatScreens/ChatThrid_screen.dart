@@ -1,4 +1,3 @@
-
 import 'package:doctor_mid/components/component_appbar.dart';
 import 'package:doctor_mid/components/component_sized_box.dart';
 import 'package:doctor_mid/components/component_text_widgets.dart';
@@ -40,7 +39,6 @@ class _ChatThirdScreenState extends State<ChatThirdScreen> {
           Column(
             children: [
               Container(
-                  width: 500,
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
@@ -53,36 +51,41 @@ class _ChatThirdScreenState extends State<ChatThirdScreen> {
                           children: [
                             ComponentSizedBox.topMargin(size: 10),
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD-l889V8_Nv64SYZECELEBUzvWgmgxdlAow&usqp=CAU'),
+                                Row(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 30,
+                                      backgroundImage: NetworkImage(
+                                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD-l889V8_Nv64SYZECELEBUzvWgmgxdlAow&usqp=CAU'),
+                                    ),
+                                    ComponentSizedBox.sideMargin(size: 10),
+                                    ComponentText.buildTextWidget(
+                                        title: 'Alberto Remirez'),
+                                  ],
                                 ),
-                                ComponentSizedBox.sideMargin(size: 10),
-                                ComponentText.buildTextWidget(
-                                    title: 'Alberto Remirez Sanchez'),
-                                ComponentSizedBox.sideMargin(size: 100),
-                              PopupMenuButton<options>(
-                          color: ConstantColor.APP_COLOR,
-                          itemBuilder: (BuildContext context) =>
-                              <PopupMenuEntry<options>>[
-                            const PopupMenuItem<options>(
-                              value: options.unmute,
-                              child: Text(
-                                'Unmute',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                            const PopupMenuItem<options>(
-                              value: options.block,
-                              child: Text(
-                                'Block',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          ],
-                        ),
+                                PopupMenuButton<options>(
+                                    color: ConstantColor.APP_COLOR,
+                                    itemBuilder: (BuildContext context) =>
+                                        <PopupMenuEntry<options>>[
+                                      const PopupMenuItem<options>(
+                                        value: options.unmute,
+                                        child: Text(
+                                          'Unmute',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                      const PopupMenuItem<options>(
+                                        value: options.block,
+                                        child: Text(
+                                          'Block',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                
                               ],
                             ),
                             Divider(
@@ -98,7 +101,6 @@ class _ChatThirdScreenState extends State<ChatThirdScreen> {
                     itemCount: messages.length,
                     shrinkWrap: true,
                     padding: EdgeInsets.only(top: 10, bottom: 10),
-                  
                     itemBuilder: (context, index) {
                       return Container(
                         padding: EdgeInsets.only(
@@ -164,12 +166,9 @@ class _ChatThirdScreenState extends State<ChatThirdScreen> {
                     child: FloatingActionButton(
                       onPressed: () {
                         messages.add(ChatMessage(
-                            messageContent:
-                               myController.text,
+                            messageContent: myController.text,
                             messageType: "sender"));
-                            setState(() {
-                              
-                            });
+                        setState(() {});
                       },
                       child: Icon(
                         Icons.send,
@@ -189,6 +188,7 @@ class _ChatThirdScreenState extends State<ChatThirdScreen> {
     );
   }
 }
+
 enum options { unmute, block }
 
 

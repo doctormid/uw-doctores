@@ -16,7 +16,7 @@ class _CitaCanceladaScreenState extends State<CitaCanceladaScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: ConstantColor.primaryColor,
-        title: Text('Appointment Details'),
+        title:ComponentText.buildTextWidget(title: 'Appointment Details',color: Colors.white),
         centerTitle: false,
         automaticallyImplyLeading: false,
         leading: InkWell(
@@ -61,7 +61,7 @@ class _CitaCanceladaScreenState extends State<CitaCanceladaScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    ComponentSizedBox.sideMargin(size: 10),
+                    ComponentSizedBox.sideMargin(size: 0),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.network(
@@ -71,7 +71,7 @@ class _CitaCanceladaScreenState extends State<CitaCanceladaScreen> {
                         fit: BoxFit.contain,
                       ),
                     ),
-                    ComponentSizedBox.sideMargin(size: 100),
+                    ComponentSizedBox.sideMargin(size: 20),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 20),
                       child: Column(

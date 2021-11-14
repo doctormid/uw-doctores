@@ -21,7 +21,7 @@ class _ConfirmacionDeLaCitaScreenState
       appBar: AppBar(
          elevation: 0.0,
         backgroundColor: ConstantColor.primaryColor,
-        title: Text('Appointment Details'),
+        title: ComponentText.buildTextWidget(title: 'Appointment Details',color: Colors.white),
         centerTitle: false,
         automaticallyImplyLeading: false,
         leading: InkWell(
@@ -55,7 +55,7 @@ class _ConfirmacionDeLaCitaScreenState
               ComponentSizedBox.topMargin(size: 40),
               Row(
                 children: [
-                  ComponentSizedBox.sideMargin(size: 20),
+                  ComponentSizedBox.sideMargin(size: 0),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Image.network(
@@ -65,31 +65,31 @@ class _ConfirmacionDeLaCitaScreenState
                       fit: BoxFit.contain,
                     ),
                   ),
-                  ComponentSizedBox.sideMargin(size: 20),
+                  ComponentSizedBox.sideMargin(size: 10),
                   Icon(
                     Icons.star,
                     color: Colors.yellow,
-                    size: 50,
+                    size: 35,
                   ),
                   Icon(
                     Icons.star,
                     color: Colors.yellow,
-                    size: 50,
+                   size: 35,
                   ),
                   Icon(
                     Icons.star,
                     color: Colors.yellow,
-                    size: 50,
+                   size: 35,
                   ),
                   Icon(
                     Icons.star,
                     color: Colors.yellow,
-                    size: 50,
+                  size: 35,
                   ),
                   Icon(
                     Icons.star,
                     color: Colors.yellow,
-                    size: 50,
+                    size: 35,
                   ),
                 ],
               ),

@@ -53,28 +53,36 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
               ComponentSizedBox.topMargin(size: 10),
               Row(
                 children: [
-                  Container(
-                    height: 30,
-                    width: 90,
-                    color: ConstantColor.APP_COLOR,
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      height: 30,
+                      color: ConstantColor.APP_COLOR,
+                    ),
                   ),
                   ComponentSizedBox.sideMargin(size: 5),
-                  Container(
-                    height: 30,
-                    width: 90,
-                    color: ConstantColor.APP_COLOR,
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      height: 30,
+                      color: ConstantColor.APP_COLOR,
+                    ),
                   ),
                   ComponentSizedBox.sideMargin(size: 5),
-                  Container(
-                    height: 30,
-                    width: 90,
-                    color: ConstantColor.APP_COLOR,
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      height: 30,
+                      color: ConstantColor.APP_COLOR,
+                    ),
                   ),
                   ComponentSizedBox.sideMargin(size: 5),
-                  Container(
-                    height: 30,
-                    width: 90,
-                    color: ConstantColor.APP_COLOR,
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      height: 30,
+                      color: ConstantColor.APP_COLOR,
+                    ),
                   ),
                 ],
               ),
@@ -174,10 +182,11 @@ class _ConfiguracionScreenState extends State<ConfiguracionScreen> {
           children: [
             Icon(icon),
             ComponentSizedBox.sideMargin(size: 10),
-            Expanded(child: FormFieldComponent.buildPhoneformFieldWithoutIcon(hint: title))
+            Expanded(
+                child: FormFieldComponent.buildPhoneformFieldWithoutIcon(
+                    hint: title))
           ],
         ),
-       
       ],
     );
   }

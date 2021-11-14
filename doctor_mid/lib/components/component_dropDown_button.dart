@@ -26,6 +26,7 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
         child: DropdownButton<String>(
           hint: Text(""),
           elevation: 2,
+          isExpanded: true,
           items: widget.dropDownItem.map((String dropDownStringItem) {
             return DropdownMenuItem<String>(
               value: dropDownStringItem,

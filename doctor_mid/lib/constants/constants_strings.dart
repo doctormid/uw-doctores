@@ -23,6 +23,7 @@ class ConstantString {
   static const String CITA_CANCLED = 'Cita Cancelada ';
   static const String AGENDAR_NUEVA_CITA = 'Agendar Nueva Cita';
   static const String AGENDAR_NUEVA_CITA_THIRD = 'Agendar Nueva Cita Third';
+  static const String AGENDAR_NUEVA_CITA_FORTH = 'Agendar Nueva Cita Forth';
 
   static const String AGENDA_FIRST = "Agenda first";
   static const String AGENDA_SECOND = "Agenda second";
@@ -32,8 +33,12 @@ class ConstantString {
   static const String PATIENTSFIRST = "Pacientes First";
   static const String PATIENTSECOND = "Pacientes Second";
   static const String PATIENTSTHIRD = "Pacientes Third";
+  static const String PATIENTSFORTH = "Pacientes Forth";
 
   static const String PAGOS = "Pagos y cobros";
   static const String CONFIGURATION = "Configuración";
   static const String PROFILE = "Perfil";
+  static const String EDITAR_FIRST = "Editar Servicio First";
+  static const String EDITAR_SECOND = "Editar Servicio Second";
+  static const String EDITAR_Third = "Editar Servicio Third";
 }
