@@ -49,8 +49,8 @@ class _AgendarNuevaCitaThirdScreenState
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 15, right: 15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+        
           children: [
             ComponentSizedBox.topMargin(size: 20),
             ComponentText.buildTextWidget(

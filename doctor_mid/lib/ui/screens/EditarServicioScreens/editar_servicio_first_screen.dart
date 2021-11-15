@@ -48,8 +48,8 @@ class _EditarServicioFirstScreenState extends State<EditarServicioFirstScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 15, right: 15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+          //crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ComponentSizedBox.topMargin(size: 20),
             ComponentText.buildTextWidget(
@@ -60,95 +60,95 @@ class _EditarServicioFirstScreenState extends State<EditarServicioFirstScreen> {
                 title:
                     'Cost are depend the change depending on physical \n valution',
                 maxLines: 2),
-            Flexible(
-              flex: 1,
-              child: ListView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: 2,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Column(
-                      children: [
-                        Row(
-                          children: [
-                            Image.asset(
-                              ImagePath.person,
-                              height: 180,
-                              width: 150,
-                              fit: BoxFit.contain,
-                            ),
-                            ComponentSizedBox.sideMargin(size: 10),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 5),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  ComponentText.buildTextWidget(
-                                      title: 'Consultation',
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold),
-                                  ComponentSizedBox.topMargin(size: 10),
-                                  ComponentText.buildTextWidget(
-                                    title: 'Consultation',
-                                  ),
-                                  ComponentSizedBox.topMargin(size: 10),
-                                  ComponentText.buildTextWidget(
-                                      title: '\$3000.00 mxn',
-                                      fontWeight: FontWeight.bold),
-                                  Row(
-                                    children: [
-                                      Icon(
-                                        Icons.star_border_outlined,
-                                        color: Colors.yellow,
-                                        size: 20,
-                                      ),
-                                      Icon(
-                                        Icons.star_border_outlined,
-                                        color: Colors.yellow,
-                                        size: 20,
-                                      ),
-                                      Icon(
-                                        Icons.star_border_outlined,
-                                        color: Colors.yellow,
-                                        size: 20,
-                                      ),
-                                      Icon(
-                                        Icons.star_border_outlined,
-                                        color: Colors.yellow,
-                                        size: 20,
-                                      ),
-                                      Icon(
-                                        Icons.star_border_outlined,
-                                        color: Colors.yellow,
-                                        size: 20,
-                                      ),
-                                    ],
-                                  ),
-                                  ComponentSizedBox.topMargin(size: 10),
-                                  Row(
-                                    children: [
-                                      CustomDropDownButton(
-                                        dropDownItem: num,
-                                        selectedValue: (value) {},
-                                      ),
-                                      ComponentButton.buildTransparentButton(
-                                          height: 35,
-                                          width: 100,
-                                          texColor: Colors.white,
-                                          borderColor: ConstantColor.APP_COLOR,
-                                          btnColor: ConstantColor.APP_COLOR,
-                                          title: 'Remove'),
-                                    ],
-                                  )
-                                ],
+          Expanded(
+            child: ListView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: 2,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Column(
+                        children: [
+                          Row(
+                            children: [
+                              Image.asset(
+                                ImagePath.person,
+                                height: 180,
+                                width: 150,
+                                fit: BoxFit.contain,
                               ),
-                            )
-                          ],
-                        ),
-                      ],
-                    );
-                  }),
-            ),
+                              ComponentSizedBox.sideMargin(size: 10),
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 5),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    ComponentText.buildTextWidget(
+                                        title: 'Consultation',
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
+                                    ComponentSizedBox.topMargin(size: 10),
+                                    ComponentText.buildTextWidget(
+                                      title: 'Consultation',
+                                    ),
+                                    ComponentSizedBox.topMargin(size: 10),
+                                    ComponentText.buildTextWidget(
+                                        title: '\$3000.00 mxn',
+                                        fontWeight: FontWeight.bold),
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.star_border_outlined,
+                                          color: Colors.yellow,
+                                          size: 20,
+                                        ),
+                                        Icon(
+                                          Icons.star_border_outlined,
+                                          color: Colors.yellow,
+                                          size: 20,
+                                        ),
+                                        Icon(
+                                          Icons.star_border_outlined,
+                                          color: Colors.yellow,
+                                          size: 20,
+                                        ),
+                                        Icon(
+                                          Icons.star_border_outlined,
+                                          color: Colors.yellow,
+                                          size: 20,
+                                        ),
+                                        Icon(
+                                          Icons.star_border_outlined,
+                                          color: Colors.yellow,
+                                          size: 20,
+                                        ),
+                                      ],
+                                    ),
+                                    ComponentSizedBox.topMargin(size: 10),
+                                    Row(
+                                      children: [
+                                        CustomDropDownButton(
+                                          dropDownItem: num,
+                                          selectedValue: (value) {},
+                                        ),
+                                        ComponentButton.buildTransparentButton(
+                                            height: 35,
+                                            width: 100,
+                                            texColor: Colors.white,
+                                            borderColor: ConstantColor.APP_COLOR,
+                                            btnColor: ConstantColor.APP_COLOR,
+                                            title: 'Remove'),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      );
+                    }),
+          ),
+            
             ComponentText.buildTextWidget(
                 title: 'Price Details',
                 fontWeight: FontWeight.bold,
@@ -259,6 +259,7 @@ class _EditarServicioFirstScreenState extends State<EditarServicioFirstScreen> {
                   borderColor: ConstantColor.APP_COLOR,
                   btnColor: ConstantColor.APP_COLOR),
             ),
+            ComponentSizedBox.topMargin(size: 16),
           ],
         ),
       ),

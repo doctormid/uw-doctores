@@ -15,10 +15,12 @@ import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agender_nueva_cita_screen
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/cita_cancelada_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/cita_finalized_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/confirmation_delaCita_screen.dart';
+import 'package:doctor_mid/ui/screens/PacientsScreens/pacients_fifth_screen.dart';
 import 'package:doctor_mid/ui/screens/PacientsScreens/pacients_first_screen.dart';
 import 'package:doctor_mid/ui/screens/PacientsScreens/pacients_forth_screen.dart';
 import 'package:doctor_mid/ui/screens/PacientsScreens/pacients_second_screen.dart';
 import 'package:doctor_mid/ui/screens/PacientsScreens/pacients_third_screen.dart';
+import 'package:doctor_mid/ui/screens/PagosScreens/pagos_y_cobros_screen.dart';
 import 'package:doctor_mid/ui/screens/PerfilScreen/perfil_screen.dart';
 import 'package:doctor_mid/ui/screens/dashboard_screen.dart';
 import 'package:doctor_mid/ui/screens/informacion_DelaCita_Screens/informacion_delacita_first_Screen.dart';
@@ -167,6 +169,16 @@ class _InitialFlowState extends State<InitialFlow> {
                   Get.to(PacientsThirdScreen());
                 }),
             buildListItem(
+                title: ConstantString.PATIENTSFORTH,
+                onpressed: () {
+                  Get.to(PacientsForthScreen());
+                }),
+            buildListItem(
+                title: ConstantString.PATIENTSFIFTH,
+                onpressed: () {
+                  Get.to(PacientsFifthScreen());
+                }),
+            buildListItem(
                 title: ConstantString.CONFIGURATION,
                 onpressed: () {
                   Get.to(ConfiguracionScreen());
@@ -175,11 +187,6 @@ class _InitialFlowState extends State<InitialFlow> {
                 title: ConstantString.PROFILE,
                 onpressed: () {
                   Get.to(PerfilScreen());
-                }),
-            buildListItem(
-                title: ConstantString.PATIENTSFORTH,
-                onpressed: () {
-                  Get.to(PacientsForthScreen());
                 }),
             buildListItem(
                 title: ConstantString.EDITAR_FIRST,
@@ -195,6 +202,11 @@ class _InitialFlowState extends State<InitialFlow> {
                 title: ConstantString.EDITAR_Third,
                 onpressed: () {
                   Get.to(EditarServicioThirdScreen());
+                }),
+            buildListItem(
+                title: ConstantString.PAGOS,
+                onpressed: () {
+                  Get.to(PagosYCobrosScreen());
                 }),
           ],
         ),

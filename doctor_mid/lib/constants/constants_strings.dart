@@ -34,6 +34,7 @@ class ConstantString {
   static const String PATIENTSECOND = "Pacientes Second";
   static const String PATIENTSTHIRD = "Pacientes Third";
   static const String PATIENTSFORTH = "Pacientes Forth";
+  static const String PATIENTSFIFTH = "Pacientes Fifth";
 
   static const String PAGOS = "Pagos y cobros";
   static const String CONFIGURATION = "Configuración";

@@ -19,6 +19,8 @@ class _PerfilScreenState extends State<PerfilScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          elevation: 0.0,
+        backgroundColor: ConstantColor.primaryColor,
         title: Text('Show Profile'),
         centerTitle: false,
       ),
