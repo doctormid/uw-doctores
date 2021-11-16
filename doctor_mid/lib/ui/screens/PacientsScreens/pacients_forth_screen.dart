@@ -116,11 +116,17 @@ class _PacientsForthScreenState extends State<PacientsForthScreen> {
                 children: [
                   ComponentText.buildTextWidget(
                       title:
-                          'Have you been under medical care in the\n last two years?',
+                          'Have you been under medical\n care in the last two years?',
                       maxLines: 2),
-                  CustomDropDownButton(
-                    dropDownItem: option,
-                    selectedValue: (value) {},
+                     
+                  Padding(
+                    padding: const EdgeInsets.only(left: 5),
+                    child: Expanded(
+                      child: CustomDropDownButton(
+                        dropDownItem: option,
+                        selectedValue: (value) {},
+                      ),
+                    ),
                   ),
                 ],
               ),

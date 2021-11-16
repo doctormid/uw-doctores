@@ -60,105 +60,111 @@ class _EditarServicioSecondScreenState
     );
   }
 
-  Column buildItemList() {
-    return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ComponentSizedBox.topMargin(size: 20),
-       
-          Column(
-            children: [
-              Row(
-                children: [
-                  Image.asset(
-                    ImagePath.person,
-                    height: 180,
-                    width: 150,
-                    fit: BoxFit.contain,
-                  ),
-                  ComponentSizedBox.sideMargin(size: 10),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 5),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            ComponentText.buildTextWidget(
-                                title: 'Dental Cleaning',
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold),
-                            ComponentSizedBox.sideMargin(size: 40),
-                            ComponentText.buildTextWidget(
-                                title: 'Details',
-                                fontWeight: FontWeight.bold,
-                                color: ConstantColor.APP_COLOR)
-                          ],
-                        ),
-                        ComponentSizedBox.topMargin(size: 10),
-                        ComponentText.buildTextWidget(
-                            title:
-                                'A professional dental cleaning at \n least twice a year can improve...',
-                            fontSize: 14,
-                            maxLines: 2),
-                        ComponentSizedBox.topMargin(size: 10),
-                        ComponentText.buildTextWidget(
-                            title: '\$3000.00 mxn',
-                            fontWeight: FontWeight.bold),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.star_border_outlined,
-                              color: Colors.yellow,
-                              size: 20,
-                            ),
-                            Icon(
-                              Icons.star_border_outlined,
-                              color: Colors.yellow,
-                              size: 20,
-                            ),
-                            Icon(
-                              Icons.star_border_outlined,
-                              color: Colors.yellow,
-                              size: 20,
-                            ),
-                            Icon(
-                              Icons.star_border_outlined,
-                              color: Colors.yellow,
-                              size: 20,
-                            ),
-                            Icon(
-                              Icons.star_border_outlined,
-                              color: Colors.yellow,
-                              size: 20,
-                            ),
-                          ],
-                        ),
-                        ComponentSizedBox.topMargin(size: 10),
-                        Row(
-                          children: [
-                            CustomDropDownButton(
-                              dropDownItem: num,
-                              selectedValue: (value) {},
-                            ),
-                            ComponentSizedBox.sideMargin(size: 20),
-                            ComponentButton.buildTransparentButton(
-                                height: 35,
-                                width: 100,
-                                texColor: Colors.white,
-                                borderColor: ConstantColor.APP_COLOR,
-                                btnColor: ConstantColor.APP_COLOR,
-                                title: 'Add'),
-                          ],
-                        )
-                      ],
+  Widget buildItemList() {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ComponentSizedBox.topMargin(size: 20),
+         
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Image.asset(
+                      ImagePath.person,
+                      height: 180,
+                      width: 140,
+                      fit: BoxFit.contain,
                     ),
-                  )
-                ],
-              ),
-            ],
-          ),
-        ],
-      );
+                    ComponentSizedBox.sideMargin(size: 10),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(bottom: 5),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                ComponentText.buildTextWidget(
+                                    title: 'Dental Cleaning',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold),
+                              
+                                ComponentText.buildTextWidget(
+                                    title: 'Details',
+                                    fontWeight: FontWeight.bold,
+                                    color: ConstantColor.APP_COLOR)
+                              ],
+                            ),
+                            ComponentSizedBox.topMargin(size: 10),
+                            ComponentText.buildTextWidget(
+                                title:
+                                    'A professional dental cleaning at \n least twice a year can improve...',
+                                fontSize: 13,
+                                maxLines: 2),
+                            ComponentSizedBox.topMargin(size: 10),
+                            ComponentText.buildTextWidget(
+                                title: '\$3000.00 mxn',
+                                fontWeight: FontWeight.bold),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.star_border_outlined,
+                                  color: Colors.yellow,
+                                  size: 20,
+                                ),
+                                Icon(
+                                  Icons.star_border_outlined,
+                                  color: Colors.yellow,
+                                  size: 20,
+                                ),
+                                Icon(
+                                  Icons.star_border_outlined,
+                                  color: Colors.yellow,
+                                  size: 20,
+                                ),
+                                Icon(
+                                  Icons.star_border_outlined,
+                                  color: Colors.yellow,
+                                  size: 20,
+                                ),
+                                Icon(
+                                  Icons.star_border_outlined,
+                                  color: Colors.yellow,
+                                  size: 20,
+                                ),
+                              ],
+                            ),
+                            ComponentSizedBox.topMargin(size: 10),
+                            Row(
+                              children: [
+                                CustomDropDownButton(
+                                  dropDownItem: num,
+                                  selectedValue: (value) {},
+                                ),
+                                ComponentSizedBox.sideMargin(size: 20),
+                                ComponentButton.buildTransparentButton(
+                                    height: 35,
+                                    width: 80,
+                                    texColor: Colors.white,
+                                    borderColor: ConstantColor.APP_COLOR,
+                                    btnColor: ConstantColor.APP_COLOR,
+                                    title: 'Add'),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+    );
   }
 }
