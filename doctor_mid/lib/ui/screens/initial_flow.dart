@@ -1,6 +1,7 @@
 import 'package:doctor_mid/components/component_text_widgets.dart';
 import 'package:doctor_mid/constants/constants_colors.dart';
 import 'package:doctor_mid/constants/constants_strings.dart';
+import 'package:doctor_mid/ui/screens/AgendaScreens/agenda_first.dart';
 import 'package:doctor_mid/ui/screens/AgendaScreens/agenda_second.dart';
 import 'package:doctor_mid/ui/screens/ChatScreens/ChatThrid_screen.dart';
 import 'package:doctor_mid/ui/screens/ChatScreens/chatSecond_screen.dart';
@@ -12,6 +13,7 @@ import 'package:doctor_mid/ui/screens/EditarServicioScreens/editar_sevicio_third
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agendar_nueva_cita_forth_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agendar_nueva_cita_third_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agender_nueva_cita_screen.dart';
+import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agensar_nueva_cita_Second.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/cita_cancelada_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/cita_finalized_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/confirmation_delaCita_screen.dart';
@@ -114,6 +116,11 @@ class _InitialFlowState extends State<InitialFlow> {
                   Get.to(ChatThirdScreen());
                 }),
             buildListItem(
+                title: ConstantString.AGENDA_FIRST,
+                onpressed: () {
+                  Get.to(AgendaFirstScreen());
+                }),
+            buildListItem(
                 title: ConstantString.AGENDA_SECOND,
                 onpressed: () {
                   Get.to(AgendaSecondScreen());
@@ -147,6 +154,11 @@ class _InitialFlowState extends State<InitialFlow> {
                 title: ConstantString.AGENDAR_NUEVA_CITA,
                 onpressed: () {
                   Get.to(AgendarNuevaCita());
+                }),
+            buildListItem(
+                title: ConstantString.AGENDAR_NUEVA_CITA_SECOND,
+                onpressed: () {
+                  Get.to(AgendarNuevaCitaSecond());
                 }),
             buildListItem(
                 title: ConstantString.AGENDAR_NUEVA_CITA_THIRD,

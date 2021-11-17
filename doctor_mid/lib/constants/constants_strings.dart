@@ -22,6 +22,8 @@ class ConstantString {
   static const String CITA_FINALIZED = 'Cita Finalized ';
   static const String CITA_CANCLED = 'Cita Cancelada ';
   static const String AGENDAR_NUEVA_CITA = 'Agendar Nueva Cita';
+  static const String AGENDAR_NUEVA_CITA_SECOND = 'Agendar Nueva Cita Second';
+
   static const String AGENDAR_NUEVA_CITA_THIRD = 'Agendar Nueva Cita Third';
   static const String AGENDAR_NUEVA_CITA_FORTH = 'Agendar Nueva Cita Forth';
 
