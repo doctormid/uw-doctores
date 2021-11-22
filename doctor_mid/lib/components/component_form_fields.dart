@@ -306,7 +306,7 @@ class FormFieldComponent {
             hintText: hint,
             labelText: lableText,
             labelStyle: TextStyle(color: Colors.black),
-            hintStyle: TextStyle(),
+            hintStyle: TextStyle(color: Colors.grey),
             contentPadding:
                 EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
           ),

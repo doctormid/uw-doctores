@@ -6,10 +6,15 @@ import 'package:doctor_mid/ui/screens/AgendaScreens/agenda_second.dart';
 import 'package:doctor_mid/ui/screens/ChatScreens/ChatThrid_screen.dart';
 import 'package:doctor_mid/ui/screens/ChatScreens/chatSecond_screen.dart';
 import 'package:doctor_mid/ui/screens/ChatScreens/patients_chat_screen.dart';
+import 'package:doctor_mid/ui/screens/CompletarPerfil/completar_prefil_screen.dart';
 import 'package:doctor_mid/ui/screens/ConfiguracionScreens/configuracion_screen.dart';
 import 'package:doctor_mid/ui/screens/EditarServicioScreens/editar_servicio_first_screen.dart';
 import 'package:doctor_mid/ui/screens/EditarServicioScreens/editar_servicio_second_screen.dart';
 import 'package:doctor_mid/ui/screens/EditarServicioScreens/editar_sevicio_third_screen.dart';
+import 'package:doctor_mid/ui/screens/InicioScreens/inicio_first_screen.dart';
+import 'package:doctor_mid/ui/screens/InicioScreens/inicio_forth_screen.dart';
+import 'package:doctor_mid/ui/screens/InicioScreens/inicio_second_screen.dart';
+import 'package:doctor_mid/ui/screens/InicioScreens/inicio_third_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agendar_nueva_cita_forth_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agendar_nueva_cita_third_screen.dart';
 import 'package:doctor_mid/ui/screens/NeuvaCitaScreens/agender_nueva_cita_screen.dart';
@@ -219,6 +224,31 @@ class _InitialFlowState extends State<InitialFlow> {
                 title: ConstantString.PAGOS,
                 onpressed: () {
                   Get.to(PagosYCobrosScreen());
+                }),
+            buildListItem(
+                title: ConstantString.COMPLETE_PROFILE,
+                onpressed: () {
+                  Get.to(CompletarPerfilScreen());
+                }),
+            buildListItem(
+                title: ConstantString.INICIO_FIRST,
+                onpressed: () {
+                  Get.to(InicioFirstScreen());
+                }),
+            buildListItem(
+                title: ConstantString.INICIO_SECOND,
+                onpressed: () {
+                  Get.to(InicioSecondScreen());
+                }),
+            buildListItem(
+                title: ConstantString.INICIO_THIRD,
+                onpressed: () {
+                  Get.to(InicioThirdScreen());
+                }),
+            buildListItem(
+                title: ConstantString.INICIO_FORTH,
+                onpressed: () {
+                  Get.to(InicioForthScreen());
                 }),
           ],
         ),

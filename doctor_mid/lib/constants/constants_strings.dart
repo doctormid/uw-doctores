@@ -44,4 +44,10 @@ class ConstantString {
   static const String EDITAR_FIRST = "Editar Servicio First";
   static const String EDITAR_SECOND = "Editar Servicio Second";
   static const String EDITAR_Third = "Editar Servicio Third";
+
+  static const String COMPLETE_PROFILE = "Completar Perfil";
+  static const String INICIO_FIRST = "Inicio First";
+  static const String INICIO_SECOND = "Inicio Second";
+  static const String INICIO_THIRD = "Inicio Third";
+  static const String INICIO_FORTH = "Inicio Forth";
 }

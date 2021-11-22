@@ -27,12 +27,16 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
           hint: Text(""),
           elevation: 2,
           isExpanded: true,
+          underline: SizedBox(),
           items: widget.dropDownItem.map((String dropDownStringItem) {
             return DropdownMenuItem<String>(
               value: dropDownStringItem,
-              child: Text(
-                dropDownStringItem,
-                style: TextStyle(fontSize: 16.0),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  dropDownStringItem,
+                  style: TextStyle(fontSize: 16.0),
+                ),
               ),
             );
           }).toList(),
